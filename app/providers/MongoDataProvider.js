@@ -152,17 +152,17 @@ MongoDataProvider.prototype.getRepeatedElements = function (collection, key, cal
                     count: {$sum: 1},
                     valueSum: {$sum: "$value"}
                 }
-            },
+            }, {
+                $sort: {
+                     count: -1
+                 }
+             },
             {
                 $project: projectQuery
             },
             {
                 $limit: 25
-            }, {
-            $sort: {
-                count: -1
             }
-        }
         ],
         function (err, res) {
             if (err) {
