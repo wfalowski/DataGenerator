@@ -18,7 +18,7 @@ module.exports = {
         collectionLimit: 100000,
         floatLimit: {
             min: 0,
-            max: 4000
+            max: 4096
         },
         charArray: "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz"
     }
